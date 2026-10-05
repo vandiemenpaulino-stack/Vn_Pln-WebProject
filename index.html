@@ -1,37 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>ITE-6 ACTIVITIES</title>
 </head>
 <body>
-
-    <h1 style="text-align: center">Student Registration Form</h1>
-
-    <form id="form">
-        <label>Student Name</label>
-        <input type="text" id="name">
-
-        <label>Course</label>
-        <input type="text" id="course">
-
-        <label>Year Level</label>
-        <input type="number" id="year">
-
-        <label>Section</label>
-        <input type="text" id="section">
-
-        <label>Email</label>
-        <input type="email" id="email">
-
-        <button type="submit">Submit</button>
-        <button type="clear" id="clearBtn">Clear</button>
-    </form>
-
-    <div class="preview" id="preview">
-        <h2>Student Information Preview</h2>
+    <!-- HEADER -->
+    <div class="header">
+        <h1>🌐  VAN PAULINO'S WEB  🌐</h1>
+        <p>Enjoy and Learn Simple HTML, CSS, and JavaScript Layout</p>
     </div>
 
-    <script src="script.js"></script>
+    <!-- MENUBAR -->
+    <div class="menubar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+    </div>
+    <div class="container">
+
+    <div class="sidebar">
+        <h3 style="font-family: 'Courier New', Courier, monospace;"><strong>ACTIVITIES</strong></h3>
+        <button class="activity-btn" onclick="showSection('homeSection')">📌 Home</button>
+        <button class="activity-btn" onclick="showSection('exercise2Section')">📌 Exercise 2</button>
+        <button class="activity-btn" onclick="showSection('exercise3Section')">📌 Exercise 3</button>
+        <button class="activity-btn" onclick="showSection('exercise4Section')">📌 Exercise 4</button>
+    </div>
+
+    <div class="content">
+
+        <!-- HOME -->
+        <div id="homeSection" class="page-section">
+            <h2 style="margin: 10px;">👨‍💻 About Me</h2>
+
+            <div class="about-section">
+                <img src="profile.jpg" alt="My Photo" class="profile-img">
+                <div class="about-text">
+                    <p >
+		                Hello! My name is <strong>Vandiemen Doinog Paulino</strong>. I am a student
+		                currently learning Programming Languages, Coding, Data Structures and Algorithm
+                        under the program of Computer Sciences. </p>
+		            <p>
+		                This website is a simple project created to demonstrate basic
+		                layout design, user interaction, and clean interface principles
+		                following Human-Computer Interaction concepts.</p>
+                    <p> 
+                        I am currently the <strong> CSC - CCIS Secretary </strong>, and I'm also the incumbent officer of the 
+                        Computer Science Students' Socienty (CS3), hence I have a lot on my plate, I just enjoy life unevenly.
+                        Balancing my academe and personal life is a must, at the same time I'm the <strong> Membership 
+                            Chairperson of the Rotaract Club of Greater - NwSSU.
+                        </strong>
+                    </p>
+                        
+		            <p>
+		                I enjoy learning new techs in <strong> Northwest Samar State University (NwSSU) </strong>
+                        under the <strong> College of Computing and Information Sciences (CCIS), </strong>
+                        and improving my skills in Marine Biology. </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXERCISE 2 -->
+        <div id="exercise2Section" class="page-section" style="display:none;">
+            <h2>🧪 Exercise 2 Activities</h2>
+            <button onclick="activity1()">Activity 1</button>
+            <button onclick="activity2()">Activity 2</button>
+            <button onclick="activity3()">Activity 3</button>
+            <button onclick="activity4()">Activity 4</button>
+            <button onclick="activity5()">Activity 5</button>
+            <button onclick="activity6()">Activity 6</button>
+        </div>
+
+        <!-- EXERCISE 3 -->
+        <div id="exercise3Section" class="page-section" style="display:none;">
+            <h2>⚡ Exercise 3 Activities</h2>
+
+            <button id="changebgBtn">Change Background Color</button>
+            <button id="darkmodeBtn">Dark Mode Toggle </button>
+
+            <hr>
+
+            <h3>Add Items to List</h3>
+            <input type="text" id="itemInput" placeholder="Enter item">
+            <button id="addBtn">Add Item</button>
+            <ul id="itemList"></ul>
+
+            <hr>
+
+            <h3>Remove Paragraph</h3>
+            <p id="removePara">This paragraph will be removed when you click the button.</p>
+            <button id="removeBtn">Remove Paragraph</button>
+
+            <hr>
+
+            <h3>Character Counter</h3>
+            <input type="text" id="charInput" placeholder="Type something...">
+            <p>Characters typed: <span id="charCount">0</span></p>
+
+            <hr>
+
+            <h3>Simple Addition Calculator</h3>
+            <input type="number" id="num1" placeholder="Enter first number">
+            <input type="number" id="num2" placeholder="Enter second number">
+            <button id="addCalcBtn">Add</button>
+            <p>Result: <span id="result">0</span></p>
+
+            <hr>
+
+            <h3>Change Image</h3>
+            <img id="myImage" src="images/image1.jpg" width="250" alt="Sample Image">
+            <br><br>
+            <button id="changeImgBtn">Change Image</button>
+
+            <hr>
+
+            <h3>Mini To-Do List</h3>
+            <input type="text" id="todoInput" placeholder="Enter a task">
+            <button id="addTodoBtn">Add Task</button>
+            <ul id="todoList"></ul>
+
+        
+        </div>
+    </div>
+    <!-- EXERCISE 4 -->
+<div id="exercise4Section" class="page-section" style="display:none;">
+
+    <div class="grade-container">
+
+        <h2>📊 Exercise 4: Student Grade Calculator</h2>
+        <p>Enter the scores and calculate the final grade.</p>
+
+        <div class="grade-form">
+
+            <label>Quiz Average</label>
+            <input type="number" id="quizScore" placeholder="Enter Quiz Score (0 - 100)">
+
+            <label>Exam Score</label>
+            <input type="number" id="examScore" placeholder="Enter Exam Score (0 - 100)">
+
+            <label>MCO Score</label>
+            <input type="number" id="mcoScore" placeholder="Enter MCO Score (0 - 100)">
+
+            <div class="grade-buttons">
+                <button id="calcGradeBtn">Calculate Grade</button>
+                <button id="resetGradeBtn">Reset</button>
+            </div>
+
+        </div>
+
+        <!-- RESULTS CONTAINER -->
+        <div class="result-container">
+            <h3>Results</h3>
+            <p>Final Grade: <span id="finalGrade">-</span></p>
+            <p>Grade Equivalent: <span id="gradeEquivalent">-</span></p>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<script src="script.js"></script>
+
+<!-- FOOTER -->
+<div class="footer">
+        <p>&copy; 2026 My Website | All Rights Reserved</p>
+</div>
 </body>
 </html>

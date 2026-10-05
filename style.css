@@ -1,42 +1,331 @@
-body {
-    font-family: "Times New Roman", sans-serif;
-    padding: 20px;
-}
-
-form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid gray;
-    margin: auto;
-    border-radius: 10px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: blue;
+body {
+    background-color: #eef2ff;
+    color: #1e1b4b;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
     color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================
+   MENU BAR
+========================= */
+.menubar {
+    background-color: #b8cde6;
+    text-align: center;
+    padding: 12px;
+}
+
+.menubar a {
+    color: #2f3e4e;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menubar a:hover {
+    color: #4361ee;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.container {
+    display: flex;
+    min-height: calc(100vh - 160px);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 260px;
+    background-color: #e0e7ff;
+    padding: 25px;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+}
+
+/* Sidebar Buttons */
+.activity-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
     border: none;
-    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #e6e6e6;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.activity-btn:hover {
+    background-color: #4a90e2;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* =========================
+   CONTENT
+========================= */
+.content {
+    flex: 1;
+    background-color: #f8f9ff;
+    padding: 30px;
+}
+
+.page-section h2 {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #e6ecf5;
+}
+
+.about-text p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* =========================
+   GENERAL BUTTON STYLE
+========================= */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3a86ff, #4361ee);
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: darkblue;
+    transform: scale(1.05);
 }
 
-.preview {
-    width: 300px;
-    margin: 20px auto;
-    padding: 15px;
-    border: 1px solid black;
-    border-radius: 10px;
+/* =========================
+   INPUTS
+========================= */
+input {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
- 
+
+/* =========================
+   LIST STYLING
+========================= */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: #f0f4fa;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Delete Button */
+.deleteBtn {
+    background-color: crimson;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================
+   THEME TRANSITIONS
+========================= */
+
+body,
+.content,
+.sidebar,
+.header,
+.footer,
+button {
+    transition: background-color 0.4s ease,
+                color 0.4s ease,
+                background 0.4s ease;
+}
+
+/* =========================
+   LIGHT THEME (DEFAULT)
+========================= */
+
+body {
+    background-color: #eef2ff;
+    color: #1e1b4b;
+}
+
+.header,
+.footer {
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    color: white;
+}
+
+.sidebar {
+    background-color: #e0e7ff;
+}
+
+.content {
+    background-color: #f8f9ff;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+.dark-mode {
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+}
+
+.dark-mode .header,
+.dark-mode .footer {
+    background: linear-gradient(135deg, #5a189a, #7b2cbf);
+}
+
+.dark-mode .sidebar {
+    background-color: #24243a;
+}
+
+.dark-mode .content {
+    background-color: #2b2b3d;
+}
+
+.dark-mode button {
+    background: linear-gradient(135deg, #5a189a, #7b2cbf);
+}
+
+/* =========================
+   ALT BACKGROUND (Exercise 3 Toggle)
+========================= */
+
+.alt-background .content {
+    background-color: #c7d2fe;
+}
+
+.grade-box{
+    background:#eef2ff;
+    padding:20px;
+    border-radius:10px;
+    max-width:400px;
+}
+
+.grade-box input{
+    width:100%;
+    margin-bottom:10px;
+}
+
+/* =========================
+   EXERCISE 4 CONTAINER
+========================= */
+
+.grade-container{
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 450px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    margin-right: 300px;
+}
+
+/* Form Layout */
+
+.grade-form{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grade-form label{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.grade-form input{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+
+.grade-buttons{
+    margin-top: 15px;
+}
+
+.grade-buttons button{
+    margin-right: 10px;
+}
+
+/* =========================
+   RESULT BOX
+========================= */
+
+.result-container{
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #eef2ff;
+    border-left: 5px solid #4361ee;
+}
+
+.result-container h3{
+    margin-bottom: 8px;
+}
