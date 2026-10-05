@@ -9,7 +9,7 @@ div align="center">
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Status](https://img.shields.io/badge/Status-Learning%20in%20Progress-4338CA?style=for-the-badge)
 
-*All of my projects during my college era.*
+*Initial Projects of my College Era.*
 
 </div>
 
@@ -29,7 +29,7 @@ Hello! I'm **Vandiemen Doinog Paulino**, a Computer Science student at **Northwe
 
 ## 📸 Preview
 
-![Website preview](images/preview.png)
+![Website preview](images/profile.png)
 
 ---
 
@@ -57,44 +57,10 @@ PROJECTS/
 └── profile.png    # My profile photo
 ```
 
----
-
-## 🚀 Run It Locally
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/vandiemenpaulino-stack/PROJECTS.git
-
-# 2. Open the folder
-cd PROJECTS
-
-# 3. Open index.html in your browser
-```
-
-You can also right-click `index.html` in VS Code and choose **Open with Live Server**.
-
----
-
-## 🛠️ Built With
-
-- **HTML**: structure of the page
-- **CSS**: blue and purple gradient theme, buttons, and layout
-- **JavaScript**: interactive features
-
----
-
-## 🌱 What's Next
-
-- [ ] Add Exercise 2, 3, and 4 pages
-- [ ] Make the layout fully mobile-friendly
-- [ ] Add more projects as I learn
-
----
-
 <div align="center">
 
 ⭐ **If you like my work, give this repo a star!** ⭐
 
-Made with 💙 by **Van Paulino**
+Made with 💙 by **Vandiemen Doinog Paulino**
 
 </div>
